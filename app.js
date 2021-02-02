@@ -59,6 +59,8 @@ app.use(passport.session())
 // --- ROUTES ---
 const index = require('./routes/index.routes')
 app.use('/', index)
+const client = require('./routes/client.routes')
+app.use('/client', client)
 
 // --- ERROR ROUTES ---
 app.use((req, res, next) => {
